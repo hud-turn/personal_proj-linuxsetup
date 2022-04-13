@@ -17,7 +17,7 @@ os.system('sudo apt update')
 os.system('sudo apt install -y brave-browser')
 
 #Installing CUPS (Print Utility)
-os.system('sudo apt-get install cups')
+os.system('sudo apt-get install -y cups')
 os.system('sudo service cups start')
 
 #Installing Network Tools

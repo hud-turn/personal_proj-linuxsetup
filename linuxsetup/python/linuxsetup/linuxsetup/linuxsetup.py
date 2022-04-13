@@ -56,12 +56,12 @@ os.system("echo '#!/bin/bash' > ~/bin/puttyusb.sh")
 os.system('echo "sudo putty /dev/ttyUSB0 -serial -sercfg 9600,8,n,1,N" >> ~/bin/puttyusb.sh')
 os.system('chmod +x puttyusb.sh')
 os.system('cd ~')
-input('Install should be complete')
+input('Install should be complete, the next step will clean the computer of unnecessary repos')
 
 #cf-19 additions
 
 #os.system('sudo apt-get update')
-#os.system('mv ./analog-output-speaker.conf /usr/share/pulseaudio/alsa-mixer/paths/analog-output-speaker.conf')
+#os.system('sudo mv ./analog-output-speaker.conf /usr/share/pulseaudio/alsa-mixer/paths/analog-output-speaker.conf')
 #os.system('sudo apt install -y inotify-tools')
 #os.system('sudo cp ./redirect-brightness.sh /usr/local/bin/')
 #os.system('sudo chmod +x /usr/local/bin/redirect-brightness.sh')
@@ -85,3 +85,7 @@ input('Install should be complete')
 #os.system('sudo reboot')
 
 os.system('sudo apt autoremove')
+os.system('clear')
+
+input("The computer will need to reboot now and will do so once you hit [ENTER], please make sure you save any work before hitting enter.")
+os.system('sudo reboot')

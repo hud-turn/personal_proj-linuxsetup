@@ -16,6 +16,10 @@ os.system('echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyrin
 os.system('sudo apt update')
 os.system('sudo apt install -y brave-browser')
 
+#Installing CUPS (Print Utility)
+os.system('sudo apt-get install cups')
+os.system('sudo service cups start')
+
 #Installing Network Tools
 os.system('sudo apt-get install -y net-tools')
 

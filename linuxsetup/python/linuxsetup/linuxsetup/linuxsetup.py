@@ -62,7 +62,7 @@ os.system('chmod +x puttyusb.sh')
 os.system('cd ~')
 input('Install should be complete, the next step will clean the computer of unnecessary repos')
 
-#Installing IDLE Pythond IDE
+#Installing IDLE Python IDE
 os.system('sudo apt install -y idle')
 
 #cf-19 additions

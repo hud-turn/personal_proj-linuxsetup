@@ -68,7 +68,7 @@ os.system('sudo apt install -y idle')
 os.system("clear")
 
 #cf-19 additions
-cfsystemlow = input(print("Are you on a CF laptop?"))
+cfsystemlow = input("Are you on a CF laptop? [Yes or No]\n")
 cfsystem = cfsystemlow.lower()
 
 if "y" in cfsystem:
@@ -91,7 +91,7 @@ if "y" in cfsystem:
 
           
 #These Lines are meant for the Raspberry Pi Distro of Linux
-rpisystemlow = input(print("Are you on a Raspberry Pi System?"))
+rpisystemlow = input("Are you on a Raspberry Pi System? [Yes or No]\n")
 rpisystem = rpisystemlow.lower()
 
 if "y" in rpisystem:
@@ -102,12 +102,19 @@ if "y" in rpisystem:
           os.system('clear')
 
 #Cleaning up after the installs
-print('Install should be complete, the next step will clean the computer of unnecessary repos')
-time.sleep(5)   
+os.system('clear')
+seconds = 0
+while seconds < 5:
+  print('Install should be complete, the next step will clean the computer of unnecessary repos after 5 seconds.')
+  print(seconds)
+  time.sleep(1)
+  seconds += 1
+  os.system('clear')
+
 os.system('sudo apt autoremove -y')
 os.system('clear')
 
-rebootsystemlow = input(print("Do you want to reboot your machine?"))
+rebootsystemlow = input("Do you want to reboot your machine? [Yes or No]\n")
 rebootsystem = rebootsystemlow.lower()
 
 if "y" in rebootsystem:

@@ -84,7 +84,7 @@ if "y" in cfsystem:
           os.system("clear")
           input('Now you will need to take this text and insert it in the bottom of the next page')
           os.system('sudo crontab -e')
-          os.system('1')
+          os.system('clear')
           
           #@reboot sudo redirect-brightness.sh -l
           #This command needs to go in the crontab
@@ -99,6 +99,7 @@ if "y" in rpisystem:
           os.system('sudo apt install linux-raspi -y')
           os.system('sudo apt-get-repository -r -p proposed')
           input('You will likely want to reboot after applying these updates')
+          os.system('clear')
 
 #Cleaning up after the installs
 print('Install should be complete, the next step will clean the computer of unnecessary repos')
@@ -106,10 +107,10 @@ sleep (5)
 os.system('sudo apt autoremove -y')
 os.system('clear')
 
-rebootsystemlow = input(print("Are you on a Raspberry Pi System?"))
+rebootsystemlow = input(print("Do you want to reboot your machine?"))
 rebootsystem = rebootsystemlow.lower()
 
 if "y" in rebootsystem:
-          input("The computer will once you hit [ENTER], please make sure you save any work before hitting enter.")
+          input("The computer will reboot once you hit [ENTER], please make sure you save any work before hitting enter.")
           os.system('sudo reboot')
 quit()

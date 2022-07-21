@@ -84,8 +84,6 @@ if "y" in cfsystem:
           input('Now you will need to take this text and insert it in the bottom of the next page')
           os.system('sudo crontab -e')
           os.system('1')
-else:
-          break
           
           #@reboot sudo redirect-brightness.sh -l
           #This command needs to go in the crontab
@@ -100,8 +98,6 @@ if "y" in rpisystem:
           os.system('sudo apt install linux-raspi')
           os.system('sudo apt-get-repository -r -p proposed')
           os.system('sudo reboot')
-else:
-          break
 
 os.system('sudo apt autoremove')
 os.system('clear')

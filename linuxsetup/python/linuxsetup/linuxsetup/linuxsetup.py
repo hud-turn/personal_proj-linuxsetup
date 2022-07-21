@@ -61,7 +61,7 @@ os.system("echo '#!/bin/bash' > ~/bin/puttyusb.sh")
 os.system('echo "sudo putty /dev/ttyUSB0 -serial -sercfg 9600,8,n,1,N" >> ~/bin/puttyusb.sh')
 os.system('chmod +x puttyusb.sh')
 os.system('cd ~')
-input('Install should be complete, the next step will clean the computer of unnecessary repos')
+os.system('clear')
 
 #Installing IDLE Python IDE
 os.system('sudo apt install -y idle')
@@ -96,16 +96,21 @@ rpisystem = rpisystemlow.lower()
 
 if "y" in rpisystem:
           os.system('sudo apt-get-repository -p proposed')
-          os.system('sudo apt install linux-raspi')
+          os.system('sudo apt install linux-raspi -y')
           os.system('sudo apt-get-repository -r -p proposed')
-          os.system('sudo reboot')
+          input('You will likely want to reboot after applying these updates')
 
-os.system('sudo apt autoremove -y')
-os.system('clear')
 
 rebootsystemlow = input(print("Are you on a Raspberry Pi System?"))
 rebootsystem = rebootsystemlow.lower()
 
+#Cleaning up after the installs
+print('Install should be complete, the next step will clean the computer of unnecessary repos')
+sleep (5)   
+os.system('sudo apt autoremove -y')
+os.system('clear')
+
 if "y" in rebootsystem:
           input("The computer will once you hit [ENTER], please make sure you save any work before hitting enter.")
           os.system('sudo reboot')
+quit()

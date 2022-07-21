@@ -99,7 +99,7 @@ if "y" in rpisystem:
           os.system('sudo apt-get-repository -r -p proposed')
           os.system('sudo reboot')
 
-os.system('sudo apt autoremove')
+os.system('sudo apt autoremove -y')
 os.system('clear')
 
 input("The computer will need to reboot now and will do so once you hit [ENTER], please make sure you save any work before hitting enter.")

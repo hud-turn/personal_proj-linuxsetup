@@ -93,7 +93,7 @@ else:
           
 #These Lines are meant for the Raspberry Pi Distro of Linux
 rpisystemlow = input(print("Are you on a Raspberry Pi System?"))
-rpisystem = cysystemlow.lower()
+rpisystem = rpisystemlow.lower()
 
 if "y" in rpisystem:
           os.system('sudo apt-get-repository -p proposed')

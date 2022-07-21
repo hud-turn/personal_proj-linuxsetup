@@ -1,4 +1,4 @@
-import os, subprocess
+import os, subprocess, time
 
 #Updating the OS
 os.system('clear')
@@ -103,7 +103,7 @@ if "y" in rpisystem:
 
 #Cleaning up after the installs
 print('Install should be complete, the next step will clean the computer of unnecessary repos')
-sleep (5)   
+time.sleep(5)   
 os.system('sudo apt autoremove -y')
 os.system('clear')
 

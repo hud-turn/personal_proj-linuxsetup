@@ -1,6 +1,7 @@
 import os, subprocess
 
 #Updating the OS
+os.system('clear')
 os.system('sudo apt-get update -y')
 os.system('sudo apt-get upgrade -y')
 os.system('sudo apt-get dist-upgrade -y')
@@ -68,7 +69,7 @@ os.system("clear")
 
 #cf-19 additions
 cfsystemlow = input(print("Are you on a CF laptop?"))
-cfsystem = cysystemlow.lower()
+cfsystem = cfsystemlow.lower()
 
 if "y" in cfsystem:
           os.system('sudo apt-get update')
@@ -102,5 +103,9 @@ if "y" in rpisystem:
 os.system('sudo apt autoremove -y')
 os.system('clear')
 
-input("The computer will need to reboot now and will do so once you hit [ENTER], please make sure you save any work before hitting enter.")
-os.system('sudo reboot')
+rebootsystemlow = input(print("Are you on a Raspberry Pi System?"))
+rebootsystem = rebootsystemlow.lower()
+
+if "y" in rebootsystem:
+          input("The computer will once you hit [ENTER], please make sure you save any work before hitting enter.")
+          os.system('sudo reboot')

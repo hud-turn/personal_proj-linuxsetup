@@ -64,32 +64,44 @@ input('Install should be complete, the next step will clean the computer of unne
 
 #Installing IDLE Python IDE
 os.system('sudo apt install -y idle')
+os.system("clear")
 
 #cf-19 additions
+cfsystemlow = input(print("Are you on a CF laptop?"))
+cfsystem = cysystemlow.lower()
 
-#os.system('sudo apt-get update')
-#os.system('sudo mv ./analog-output-speaker.conf /usr/share/pulseaudio/alsa-mixer/paths/analog-output-speaker.conf')
-#os.system('sudo apt install -y inotify-tools')
-#os.system('sudo cp ./redirect-brightness.sh /usr/local/bin/')
-#os.system('sudo chmod +x /usr/local/bin/redirect-brightness.sh')
-#os.system("clear")
-#print ("This Command will need to be inserted into the crontab")
-#print("Please do not press [ENTER] until you have copied the following text")
-#input ("@reboot sudo /usr/local/bin/redirect-brightness.sh -l")
-#os.system("clear")
-#input('Now you will need to take this text and insert it in the bottom of the next page')
-#os.system('sudo crontab -e')
-#os.system('1')
-
-#@reboot sudo redirect-brightness.sh -l
-#This command needs to go in the crontab
+if "y" in cfsystem:
+          os.system('sudo apt-get update')
+          os.system('sudo mv ./analog-output-speaker.conf /usr/share/pulseaudio/alsa-mixer/paths/analog-output-speaker.conf')
+          os.system('sudo apt install -y inotify-tools')
+          os.system('sudo cp ./redirect-brightness.sh /usr/local/bin/')
+          os.system('sudo chmod +x /usr/local/bin/redirect-brightness.sh')
+          os.system("clear")
+          print ("This Command will need to be inserted into the crontab")
+          print("Please do not press [ENTER] until you have copied the following text")
+          input ("@reboot sudo /usr/local/bin/redirect-brightness.sh -l")
+          os.system("clear")
+          input('Now you will need to take this text and insert it in the bottom of the next page')
+          os.system('sudo crontab -e')
+          os.system('1')
+else:
+          break
+          
+          #@reboot sudo redirect-brightness.sh -l
+          #This command needs to go in the crontab
 
           
 #These Lines are meant for the Raspberry Pi Distro of Linux
-#os.system('sudo apt-get-repository -p proposed')
-#os.system('sudo apt install linux-raspi')
-#os.system('sudo apt-get-repository -r -p proposed')
-#os.system('sudo reboot')
+rpisystemlow = input(print("Are you on a Raspberry Pi System?"))
+rpisystem = cysystemlow.lower()
+
+if "y" in rpisystem:
+          os.system('sudo apt-get-repository -p proposed')
+          os.system('sudo apt install linux-raspi')
+          os.system('sudo apt-get-repository -r -p proposed')
+          os.system('sudo reboot')
+else:
+          break
 
 os.system('sudo apt autoremove')
 os.system('clear')

@@ -91,6 +91,7 @@ if "y" in cfsystem:
 
           
 #These Lines are meant for the Raspberry Pi Distro of Linux
+os.system('clear')
 rpisystemlow = input("Are you on a Raspberry Pi System? [Yes or No]\n")
 rpisystem = rpisystemlow.lower()
 
@@ -103,12 +104,12 @@ if "y" in rpisystem:
 
 #Cleaning up after the installs
 os.system('clear')
-seconds = 0
-while seconds < 5:
+second = 5
+while second > 1:
   print('Install should be complete, the next step will clean the computer of unnecessary repos after 5 seconds.')
-  print(seconds)
+  print(second, "seconds")
   time.sleep(1)
-  seconds += 1
+  second -= 1
   os.system('clear')
 
 os.system('sudo apt autoremove -y')

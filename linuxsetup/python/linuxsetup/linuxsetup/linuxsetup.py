@@ -67,6 +67,10 @@ os.system('clear')
 os.system('sudo apt install -y idle')
 os.system("clear")
 
+#Installing TLP Battery Manager
+os.system('sudo apt install -y tlp')
+os.system('clear')
+
 #cf-19 additions
 cfsystemlow = input("Are you on a CF laptop? [Yes or No]\n")
 cfsystem = cfsystemlow.lower()

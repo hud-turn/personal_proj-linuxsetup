@@ -68,7 +68,7 @@ os.system('sudo apt install -y idle')
 os.system("clear")
 
 #Installing TLP Battery Manager
-os.system('sudo apt install -y tlpui')
+os.system('sudo apt install -y tlp')
 os.system('clear')
 
 #cf-19 additions

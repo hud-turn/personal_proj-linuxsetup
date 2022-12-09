@@ -67,7 +67,7 @@ os.system('clear')
 os.system('sudo apt install -y idle')
 os.system("clear")
 
-#Installing TLP Battery Manager
+#Installing TLP Battery Manager or look at www.ubuntuhandbook.org/index.php/2020/05/lid-close-behavior-ubuntu-20-04/
 os.system('sudo apt install -y tlp')
 os.system('clear')
 

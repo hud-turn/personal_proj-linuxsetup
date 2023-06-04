@@ -109,7 +109,7 @@ if "y" in rpisystem:
 #Cleaning up after the installs
 os.system('clear')
 second = 5
-while second > 1:
+while second >= 0:
   print('Install should be complete, the next step will clean the computer of unnecessary repos after 5 seconds.')
   print(second, "seconds")
   time.sleep(1)
